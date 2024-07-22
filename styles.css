@@ -1,0 +1,318 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root
+{
+    --maincolor: #420ebb;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+header {
+    background: var(--maincolor);
+    color: white;
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid var(--maincolor);
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.banner {
+    background: url(assets/bg.png);
+    background-size: cover;
+    width: 93%;
+    margin: 5px auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.banner button
+{
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--maincolor);
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+.banner span
+{
+    color: var(--maincolor);
+    font-weight: 700;
+}
+.statistics .stats-cont
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.statistics .stats-cont div
+{
+    width: 31%;
+    margin: 10px;
+    background-color: #420ebbaf;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--maincolor);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.statistics .stats-cont div h3
+{
+    font-size: 35px;
+}
+.statistics, .requests {
+    background-color: white;
+    width: 93%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.filters button {
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.filters button:hover {
+    background-color: darkorange;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--maincolor);
+    color: white;
+}
+td button
+{
+    border: none;
+    background-color: #420ebbab;
+    color: #420ebb;
+    font-weight: 700;
+    padding: 7px 14px;
+    margin: 7px;
+    border-radius: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+.modal-content input, .modal-content select,.modal-content textarea
+{
+    padding:10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    display: block;
+    margin: 5px auto;
+    width: 100%;
+    resize: none;
+}
+.modal-content button
+{
+    background-color: var(--maincolor);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal .title1
+{
+    text-align: center;
+    color: var(--maincolor);
+}
+/* login */
+#login
+{
+    text-align: center;
+}
+#login .choices
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+#login .choices div
+{
+    border: 1px solid var(--maincolor);
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#login .choices div:hover 
+{
+    background-color: var(--maincolor);
+    color: white;
+}
+#login .choices div p
+{
+    font-size: 25px;
+}
+#login .login-form
+{
+    margin: 10px 0;
+    background-color: rgb(236, 236, 236);
+    padding: 10px;
+    border-radius: 10px;
+}
+.therapist
+{
+    display: none;
+}
+.user
+{
+    display: none;
+}
+#therapist-modal .cover-img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+#therapist-modal
+{
+    text-align: center;
+}
+#therapist-availability
+{
+    border: 1px solid var(--maincolor);
+    padding: 7px 14px;
+    border-radius: 20px;
+    width: fit-content;
+    color: var(--maincolor);
+    display: block;
+    margin: 5px auto;
+    font-size: 12px;
+}
+#therapist-modal .profile-2
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: -70px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.prof--2
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.therapist-card
+{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+}
+.therapist-card img
+{
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+#user-requests
+{
+    width: 93%;
+    margin: 0 auto;
+}
+.ther-request{
+    width: 93%;
+    margin: 0 auto;
+}
+.ther-request h2
+{
+    font-size: 15px;
+    margin-left: 10px;
+    background-color: orange;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 5px;
+    width: fit-content;
+}
